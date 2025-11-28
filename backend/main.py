@@ -20,9 +20,9 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from .cropReceipt import detect_receipt_lines
-from .findcontours import find_text_contours, preprocess
-from .model_loader import load_model, predict_character
+from cropReceipt import detect_receipt_lines
+from findcontours import find_text_contours, preprocess
+from model_loader import load_model, predict_character
 
 app = FastAPI(title="SnapTrack OCR API")
 

@@ -14,7 +14,7 @@ from torch import nn
 from torchvision import transforms
 
 # Character set used by the model. Adjust as needed to match training data.
-CHARSET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARSET = "#$&0123456789@ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 class CNN(nn.Module):
