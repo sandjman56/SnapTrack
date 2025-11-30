@@ -24,12 +24,15 @@ const ResultsTable = ({ items }) => {
             </tr>
           </thead>
           <tbody>
-            {items.map((item, idx) => (
-              <tr key={`${item.name}-${idx}`} className="border-b border-[#1f1f1f] last:border-0">
-                <td className="py-2 font-medium text-white">{item.name || 'Item'}</td>
-                <td className="py-2 text-right text-electric">{item.price.toFixed(2)}</td>
-              </tr>
-            ))}
+            {items.map((item, idx) => {
+              const priceValue = Number(item.price ?? 0)
+              return (
+                <tr key={`${item.name}-${idx}`} className="border-b border-[#1f1f1f] last:border-0">
+                  <td className="py-2 font-medium text-white">{item.name || 'Item'}</td>
+                  <td className="py-2 text-right text-electric">{priceValue.toFixed(2)}</td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>
