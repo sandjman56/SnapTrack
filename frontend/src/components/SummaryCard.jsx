@@ -1,6 +1,8 @@
 import React from 'react'
 
-const SummaryCard = ({ store, date, subtotal, total, rawText, onSave, canSave, saveState }) => {
+const SummaryCard = ({ store, date, subtotal, taxes = [], total, rawText = [], onSave, canSave, saveState }) => {
+  const formattedTaxes = taxes.length ? taxes.map((t) => t.toFixed(2)).join(', ') : '—'
+  const rawTextContent = Array.isArray(rawText) ? rawText.join('\n') : rawText
   return (
     <div className="card flex flex-col gap-3">
       <div className="flex items-center justify-between">
@@ -18,6 +20,10 @@ const SummaryCard = ({ store, date, subtotal, total, rawText, onSave, canSave, s
           <div>
             <p className="text-sm text-gray-400">Subtotal</p>
             <p className="text-2xl font-semibold text-white">${subtotal?.toFixed?.(2) || '—'}</p>
+          </div>
+          <div>
+            <p className="text-sm text-gray-400">Taxes</p>
+            <p className="text-lg font-semibold text-white">{formattedTaxes}</p>
           </div>
           <div>
             <p className="text-sm text-gray-400">Total</p>
@@ -47,7 +53,7 @@ const SummaryCard = ({ store, date, subtotal, total, rawText, onSave, canSave, s
       <div className="text-xs text-gray-400 text-left max-w-full">
         <p className="uppercase tracking-wide text-electric mb-1">Raw OCR</p>
         <p className="whitespace-pre-wrap leading-relaxed bg-[#0f0f0f] border border-[#2a2a2a] rounded-lg p-3 min-h-[120px]">
-          {rawText || 'Waiting for OCR results…'}
+          {rawTextContent || 'Waiting for OCR results…'}
         </p>
       </div>
     </div>
