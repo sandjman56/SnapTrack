@@ -23,8 +23,13 @@ const ReceiptCard = ({ receipt, onSelect }) => {
         </div>
         <div className="text-right">
           <p className="text-xs text-gray-400">Total</p>
-          <p className="text-xl font-bold text-neon">${receipt.total?.toFixed?.(2) || '—'}</p>
+          <p className="text-xl font-bold text-neon">${(receipt.total ?? receipt.subtotal)?.toFixed?.(2) || '—'}</p>
           <p className="text-xs text-gray-500">Subtotal: ${receipt.subtotal?.toFixed?.(2) || '—'}</p>
+          {receipt.taxes?.length ? (
+            <p className="text-xs text-gray-500">Taxes: {receipt.taxes.map((t) => t.toFixed(2)).join(', ')}</p>
+          ) : (
+            <p className="text-xs text-gray-600">Taxes: —</p>
+          )}
         </div>
       </div>
     </button>

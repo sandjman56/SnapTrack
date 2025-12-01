@@ -11,8 +11,9 @@ const emptyResults = {
   date: '',
   subtotal: null,
   total: null,
+  taxes: [],
   items: [],
-  raw_text: '',
+  raw_text: [],
   blocks: [],
   image_base64: '',
 }
@@ -87,8 +88,9 @@ const App = () => {
       const payload = {
         subtotal: results.subtotal,
         total: results.total,
+        taxes: results.taxes || [],
         items: results.items,
-        raw_text: results.raw_text?.split('\n') || [],
+        raw_text: results.raw_text || [],
         image_base64: base64Image || results.image_base64,
         store: results.store,
         date: results.date,
@@ -160,10 +162,11 @@ const App = () => {
                   store={results.store}
                   date={results.date}
                   subtotal={results.subtotal}
+                  taxes={results.taxes}
                   total={results.total}
                   rawText={results.raw_text}
                   onSave={handleSave}
-                  canSave={Boolean(results.total && base64Image)}
+                  canSave={Boolean((results.total ?? results.subtotal) && base64Image)}
                   saveState={saveState}
                 />
                 {isLoading ? shimmer : <ResultsTable items={results.items} />}
@@ -202,8 +205,16 @@ const App = () => {
                       <p className="text-xl font-semibold">${selectedReceipt.subtotal?.toFixed?.(2) || '—'}</p>
                     </div>
                     <div>
+                      <p className="text-xs text-gray-400">Taxes</p>
+                      <p className="text-lg font-semibold">
+                        {selectedReceipt.taxes?.length
+                          ? selectedReceipt.taxes.map((t) => t.toFixed?.(2) || t).join(', ')
+                          : '—'}
+                      </p>
+                    </div>
+                    <div>
                       <p className="text-xs text-gray-400">Total</p>
-                      <p className="text-xl font-semibold text-neon">${selectedReceipt.total?.toFixed?.(2) || '—'}</p>
+                      <p className="text-xl font-semibold text-neon">${(selectedReceipt.total ?? selectedReceipt.subtotal)?.toFixed?.(2) || '—'}</p>
                     </div>
                   </div>
                   <div className="mt-4">

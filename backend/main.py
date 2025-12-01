@@ -15,7 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from cropReceipt import detect_receipt_lines
-from extract_amount import PRICE_REGEX, extract_amount_to_right, guess_store_name, parse_line_items
+from extract_amount import parse_receipt
 from ocr_easy import run_easy_ocr
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -57,8 +57,9 @@ class ReceiptResponse(BaseModel):
     store: str
     subtotal: Optional[float] = None
     total: Optional[float] = None
+    taxes: List[float] = Field(default_factory=list)
     items: List[ReceiptItem]
-    raw_text: str
+    raw_text: List[str]
     blocks: List[OCRBlock]
     image_base64: str
     date: Optional[str] = None
@@ -67,6 +68,7 @@ class ReceiptResponse(BaseModel):
 class SaveReceiptRequest(BaseModel):
     subtotal: Optional[float] = None
     total: Optional[float] = None
+    taxes: List[float] = Field(default_factory=list)
     items: List[ReceiptItem] = Field(default_factory=list)
     raw_text: List[str] | str
     image_base64: str
@@ -114,31 +116,6 @@ def normalize_raw_text(raw_text: List[str] | str) -> List[str]:
     return [line for line in raw_text.splitlines() if line.strip()]
 
 
-def amount_in_text(text: str) -> Optional[float]:
-    match = PRICE_REGEX.search(text)
-    if not match:
-        return None
-    try:
-        return float(match.group(0).replace("$", "").replace(",", ""))
-    except ValueError:
-        return None
-
-
-def extract_totals(results):
-    subtotal = None
-    total = None
-
-    for bbox, text, _conf in results:
-        lower = text.lower()
-        direct_amount = amount_in_text(text)
-        if "subtotal" in lower:
-            subtotal = direct_amount or extract_amount_to_right(results, bbox) or subtotal
-        if "total" in lower and "subtotal" not in lower:
-            total = direct_amount or extract_amount_to_right(results, bbox) or total
-
-    return subtotal, total
-
-
 def ensure_datetime_iso(date_str: Optional[str]) -> str:
     if date_str:
         try:
@@ -160,22 +137,16 @@ async def process_receipt(file: UploadFile = File(...)):
         cropped = detect_receipt_lines(image)
         ocr_results = run_easy_ocr(cropped)
 
-        subtotal, total = extract_totals(ocr_results)
+        parsed = parse_receipt(ocr_results)
         blocks = [
             {"bbox": bbox, "text": text, "confidence": float(conf)}
             for bbox, text, conf in ocr_results
         ]
-        raw_lines = [text for _bbox, text, _conf in ocr_results]
-        items = [ReceiptItem(**item) for item in parse_line_items(ocr_results)]
-        store = guess_store_name(ocr_results)
         date = datetime.utcnow().date().isoformat()
 
         return {
-            "store": store,
-            "subtotal": subtotal,
-            "total": total,
-            "items": items,
-            "raw_text": "\n".join(raw_lines),
+            **parsed,
+            "items": [ReceiptItem(**item) for item in parsed["items"]],
             "blocks": blocks,
             "image_base64": encode_base64(contents),
             "date": date,
@@ -201,7 +172,8 @@ async def save_receipt(payload: SaveReceiptRequest):
             "id": receipt_id,
             "date": ensure_datetime_iso(payload.date),
             "subtotal": payload.subtotal,
-            "total": payload.total,
+            "total": payload.total or payload.subtotal,
+            "taxes": payload.taxes or [],
             "items": [item.dict() for item in payload.items],
             "image_path": f"/receipts/{filename}",
             "raw_text": normalize_raw_text(payload.raw_text),
@@ -223,7 +195,7 @@ async def history():
     for receipt in receipts:
         date_str = receipt.get("date") or ""
         if date_str.startswith(month_key):
-            monthly_total += float(receipt.get("total") or 0.0)
+            monthly_total += float(receipt.get("total") or receipt.get("subtotal") or 0.0)
 
     return {
         "receipts": list(reversed(receipts)),
