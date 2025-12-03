@@ -1,1 +1,533 @@
-[]
+[
+  {
+    "id": "080a5996-2023-496f-9fad-5d57d79f5482",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": null,
+    "total": 56.21,
+    "taxes": [],
+    "items": [
+      {
+        "name": "al8k (Tirs",
+        "price": 98.29
+      },
+      {
+        "name": "'",
+        "price": 4.36
+      },
+      {
+        "name": "1202 (Tips",
+        "price": 9.21
+      }
+    ],
+    "image_path": "/receipts/080a5996-2023-496f-9fad-5d57d79f5482.png",
+    "raw_text": [
+      "'GAMjA\" Coi ' RESTAURANT",
+      "3003",
+      "OLYMPIC",
+      "\"Bivb SiE 107",
+      "ios  ANGELES CA90006",
+      "(213) 381-6446",
+      "{ern2r2825n",
+      "ID No",
+      "473d5258",
+      "Cre",
+      "Sale:",
+      "Transaction #:",
+      "Card",
+      "Type",
+      "Accoun",
+      "8959",
+      "Entry",
+      "Chie",
+      "Host",
+      "Ref _",
+      "Humber:",
+      "Auth",
+      "Code",
+      "5285198288",
+      "Batch Number",
+      "Response -",
+      "APPROVAL  025290",
+      "Mode",
+      "Issuer",
+      "APPLAb:",
+      "hoovishoaRERY",
+      "Subtotal",
+      "$46",
+      "07",
+      "@DDTIPS",
+      "al8k (Tirs 98.29,lotal",
+      "'4.36)",
+      "1202 (Tips $9.21 ,",
+      "$55 . 28)",
+      "1222(T1es $1O. 14,Total $56.21)/",
+      "CUSIUM TIPS",
+      "TOTAL",
+      "copY",
+      "Total",
+      "CUSTOMER"
+    ],
+    "store": "'GAMjA\" Coi ' RESTAURANT"
+  },
+  {
+    "id": "d508a055-f4d5-4335-b8d5-edb66d59c4f4",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": null,
+    "total": 40.78,
+    "taxes": [],
+    "items": [
+      {
+        "name": "S",
+        "price": 40.78
+      }
+    ],
+    "image_path": "/receipts/d508a055-f4d5-4335-b8d5-edb66d59c4f4.png",
+    "raw_text": [
+      "Grand Total:",
+      "S40.78"
+    ],
+    "store": "Grand Total:"
+  },
+  {
+    "id": "ad12876c-01fe-4ed2-8ffe-eaceb658b673",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": 29.98,
+    "total": 29.98,
+    "taxes": [
+      1.26
+    ],
+    "items": [
+      {
+        "name": "S",
+        "price": 23.98
+      },
+      {
+        "name": "S",
+        "price": 0.0
+      },
+      {
+        "name": "S",
+        "price": 0.0
+      },
+      {
+        "name": "Item",
+        "price": 83.0
+      },
+      {
+        "name": "S",
+        "price": 29.98
+      },
+      {
+        "name": "(S",
+        "price": 11.99
+      },
+      {
+        "name": "(S",
+        "price": 1.26
+      },
+      {
+        "name": "S",
+        "price": 17.99
+      },
+      {
+        "name": "Placed at November 28,",
+        "price": 8.59
+      },
+      {
+        "name": "Due at November 28,",
+        "price": 9.01
+      }
+    ],
+    "image_path": "/receipts/ad12876c-01fe-4ed2-8ffe-eaceb658b673.png",
+    "raw_text": [
+      "Uber Eats",
+      "PICKUP",
+      "Sebastian G.",
+      "6A88B",
+      "Loyal customter (47 orders)",
+      "Disposable items; No",
+      "2 x Combo Over Rice (lamb",
+      "S23.98",
+      "(contains beef) and chicken)",
+      "TOPPING CHOICE",
+      "Ix Standard (rice_",
+      "meat; lelluce;",
+      "SO.0O",
+      "salata)",
+      "WHITE SAUCE",
+      "Ix Extra Whlte Sauce",
+      "S0.00",
+      "GREEN SAUCE",
+      "Ix",
+      "line green sauce",
+      "SO.0O",
+      "BBQ SAUCE",
+      "Ix 2 lline BBQ sauce",
+      "S0.00",
+      "EXTRA PROTEIN?",
+      "Ix Extra Protein",
+      "83.00",
+      "Subtotal",
+      "S29.98",
+      "Tax",
+      "S1,.26",
+      "Special Offer",
+      "(S11.99)",
+      "Taxes withheld",
+      "(S1.26)",
+      "Amount",
+      "S17.99",
+      "Placed at November 28, 8.59 PM",
+      "Due at November 28, 9.01 PM",
+      "Thank",
+      "for ordering from Shahs",
+      "Pittsburgh; Semple Stree",
+      "paid",
+      "you"
+    ],
+    "store": "Uber Eats"
+  },
+  {
+    "id": "1d5328fe-32f3-49c6-8678-b54c8e525794",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": 49.04,
+    "total": 49.04,
+    "taxes": [],
+    "items": [
+      {
+        "name": "Item",
+        "price": 32.98
+      },
+      {
+        "name": "Item",
+        "price": 6.88
+      },
+      {
+        "name": "Item",
+        "price": 9.18
+      },
+      {
+        "name": "Item",
+        "price": 49.04
+      },
+      {
+        "name": "Item",
+        "price": 49.04
+      },
+      {
+        "name": "Item",
+        "price": 49.04
+      },
+      {
+        "name": "Item",
+        "price": 0.0
+      },
+      {
+        "name": "Item",
+        "price": 49.04
+      }
+    ],
+    "image_path": "/receipts/1d5328fe-32f3-49c6-8678-b54c8e525794.png",
+    "raw_text": [
+      "feedback",
+      "survev",
+      "wa",
+      "mar t",
+      "Give uS",
+      "Thank",
+      "ID",
+      "7ROLFKVID2Y",
+      "Walmart",
+      "716-646-0682 Mgr: KALI",
+      "5360   SOUTHWESTERN BLVD",
+      "HAMBURG NY.14075",
+      "02405 OP#",
+      "TE# 50 TR# 02960",
+      "St#",
+      "Loz",
+      "068113114797",
+      "32.98",
+      "EQ NICO",
+      "083041500999",
+      "6.88",
+      "SONOMA  PEPP",
+      "069899781033",
+      "9.18",
+      "UDIS GLUTEN",
+      "SUBTOTAL",
+      "49.04",
+      "TOTAL",
+      "49.04",
+      "DEBIT",
+      "TEND",
+      "49.04",
+      "CHANCE   DUE",
+      "0.00",
+      "EFT  DEBIT",
+      "PAY FROM",
+      "PRIMARY",
+      "49.04",
+      "TOTAL PURCHASE",
+      "Debit",
+      "Kr*",
+      "KKrt",
+      "KK** 8240 I 0",
+      "REF",
+      "# 203300709814",
+      "NETWORK ID. 0069 APPR CODE 451538",
+      "Debit",
+      "AID A0000000042203",
+      "AAC 65OAEFOCB8B7LABC",
+      "TERMINAL",
+      "# SC011046",
+      "02/02/22",
+      "18:43:02",
+      "ITEMS SOLD 3",
+      "Tc# 1302 9164",
+      "3444 063",
+      "Walmart#",
+      "the",
+      "Give",
+      "of",
+      "todaye",
+      "Scanto",
+      "gift",
+      "18:",
+      "02/02/22",
+      "com",
+      "you!",
+      "009050",
+      "0550",
+      "them",
+      "mimbership",
+      "43:08"
+    ],
+    "store": "feedback"
+  },
+  {
+    "id": "491a5724-7575-4a23-b449-b8acbf7041f0",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": null,
+    "total": 30.99,
+    "taxes": [],
+    "items": [
+      {
+        "name": "Item",
+        "price": 4.99
+      },
+      {
+        "name": "Item",
+        "price": 6.0
+      },
+      {
+        "name": "BRAGGZ.O5o",
+        "price": 2.12
+      },
+      {
+        "name": "(3 \u20ac",
+        "price": 1.69
+      },
+      {
+        "name": "Item",
+        "price": 5.07
+      },
+      {
+        "name": "Item",
+        "price": 0.24
+      },
+      {
+        "name": "Item",
+        "price": 43.99
+      },
+      {
+        "name": "Item",
+        "price": 0.96
+      },
+      {
+        "name": "Item",
+        "price": 30.99
+      },
+      {
+        "name": "Item",
+        "price": 0.0
+      },
+      {
+        "name": "Item",
+        "price": 7.99
+      }
+    ],
+    "image_path": "/receipts/491a5724-7575-4a23-b449-b8acbf7041f0.png",
+    "raw_text": [
+      "Hi",
+      "5",
+      "341",
+      "BrookLyn NY 11231",
+      "Tel",
+      "(718)36n-91",
+      "1",
+      "+++++4+4",
+      "MOTHER LAw",
+      "##tf###++#+",
+      "NAPA",
+      "VEGAN",
+      "9,99 FN",
+      "Yogi TEAS",
+      "ORG 16.Oo8G  YCGi",
+      "TEA",
+      "4.99 FN",
+      "6.00 BG",
+      "TEAS",
+      "hunT",
+      "To PASTe",
+      "BRAGGZ.O5o2.12,06 02",
+      "1,99 FN",
+      "nutrIT",
+      "5002",
+      "STARKISH",
+      "4,50 02",
+      "FN",
+      "A,507 5 OChunk\" Light tun",
+      "(3 \u20ac $1.69)",
+      "5.07 FN",
+      "GARI Tr'",
+      "Cacf",
+      "3,90",
+      "0.24 Id",
+      "43.99 / Iu",
+      "0.96 Fm",
+      "Sub)",
+      "30.99",
+      "Paid",
+      "30. 99",
+      "30. 99",
+      "8",
+      "0.00",
+      "Mango",
+      "Knickerbocker",
+      "Ave _",
+      "=Sa",
+      "les",
+      "Receipt=",
+      "f+4414+t+f++",
+      "kINChI",
+      "CABBAGE",
+      "YOGI",
+      "GREEN",
+      "Tomat",
+      "BRAGG",
+      "ITIONAL",
+      "YE4S",
+      "BRAGG",
+      "7.99",
+      "Total",
+      "Grard",
+      "Tota!",
+      "Card",
+      "Total",
+      "Change",
+      "Itens",
+      "DDate",
+      "03/13/2020"
+    ],
+    "store": "Hi"
+  },
+  {
+    "id": "c84898ae-cba6-4416-99db-420c1e1d911e",
+    "date": "2025-12-01T00:00:00",
+    "subtotal": 29.98,
+    "total": 29.98,
+    "taxes": [
+      1.26
+    ],
+    "items": [
+      {
+        "name": "S",
+        "price": 23.98
+      },
+      {
+        "name": "S",
+        "price": 0.0
+      },
+      {
+        "name": "S",
+        "price": 0.0
+      },
+      {
+        "name": "Item",
+        "price": 83.0
+      },
+      {
+        "name": "S",
+        "price": 29.98
+      },
+      {
+        "name": "(S",
+        "price": 11.99
+      },
+      {
+        "name": "(S",
+        "price": 1.26
+      },
+      {
+        "name": "S",
+        "price": 17.99
+      },
+      {
+        "name": "Placed at November 28,",
+        "price": 8.59
+      },
+      {
+        "name": "Due at November 28,",
+        "price": 9.01
+      }
+    ],
+    "image_path": "/receipts/c84898ae-cba6-4416-99db-420c1e1d911e.png",
+    "raw_text": [
+      "Uber Eats",
+      "PICKUP",
+      "Sebastian G.",
+      "6A88B",
+      "Loyal customter (47 orders)",
+      "Disposable items; No",
+      "2 x Combo Over Rice (lamb",
+      "S23.98",
+      "(contains beef) and chicken)",
+      "TOPPING CHOICE",
+      "Ix Standard (rice_",
+      "meat; lelluce;",
+      "SO.0O",
+      "salata)",
+      "WHITE SAUCE",
+      "Ix Extra Whlte Sauce",
+      "S0.00",
+      "GREEN SAUCE",
+      "Ix",
+      "line green sauce",
+      "SO.0O",
+      "BBQ SAUCE",
+      "Ix 2 lline BBQ sauce",
+      "S0.00",
+      "EXTRA PROTEIN?",
+      "Ix Extra Protein",
+      "83.00",
+      "Subtotal",
+      "S29.98",
+      "Tax",
+      "S1,.26",
+      "Special Offer",
+      "(S11.99)",
+      "Taxes withheld",
+      "(S1.26)",
+      "Amount",
+      "S17.99",
+      "Placed at November 28, 8.59 PM",
+      "Due at November 28, 9.01 PM",
+      "Thank",
+      "for ordering from Shahs",
+      "Pittsburgh; Semple Stree",
+      "paid",
+      "you"
+    ],
+    "store": "Uber Eats"
+  }
+]
